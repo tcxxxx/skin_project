@@ -64,7 +64,7 @@ class Model(object):
         return network
 
     def train(self, X, Y):
-        self.model.fit(X, Y, n_epoch=80, validation_set=0.2, shuffle=True,
+        self.model.fit(X, Y, n_epoch=30, validation_set=0.2, shuffle=True,
                   show_metric=True, batch_size=16, snapshot_step=200,
                   snapshot_epoch=True, run_id=self.runId)
 
@@ -111,7 +111,7 @@ class Model_Combination(object):
             self.model.load(mfn, scope_for_restore="scope3", weights_only=True)
 
     def train(self, X, Y):
-        self.model.fit(X, Y, n_epoch=80, validation_set=0.2, shuffle=True,
+        self.model.fit(X, Y, n_epoch=30, validation_set=0.2, shuffle=True,
                   show_metric=True, batch_size=16, snapshot_step=200,
                   snapshot_epoch=True, run_id=self.runId)
 
